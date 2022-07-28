@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/bin/python3 /home/stonks-cli/main.py
+/bin/python3 /home/$USER/stonks-cli/main.py
 
 # stonks-cli
 #
@@ -17,4 +17,4 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
-# Project repository: https://github.com/ProfMad/stonks-cli
+# Project repository: https://github.com/GroovinFlow/stonks-cli
