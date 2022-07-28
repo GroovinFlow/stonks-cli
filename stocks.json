@@ -1,35 +1,7 @@
 {
     "tax_procentage": 0.02,
-    "investments": [
-        {
-            "ticker": "XMR-EUR",
-            "starting_sum": 500,
-            "current_sum": 448.69,
-            "buy_price": 175,
-            "last_known_price": 157.04,
-            "profit": -51.31,
-            "investment_timestamp": "2022-05-10"
-        },
-        {
-            "ticker": "TSLA",
-            "starting_sum": 500,
-            "current_sum": 624.81,
-            "buy_price": 660,
-            "last_known_price": 824.75,
-            "profit": 124.81,
-            "investment_timestamp": "2022-05-22"
-        },
-        {
-            "ticker": "XMR-EUR",
-            "starting_sum": 500,
-            "current_sum": 720.37,
-            "buy_price": 109,
-            "last_known_price": 157.04,
-            "profit": 220.37,
-            "investment_timestamp": "2022-06-20"
-        }
-    ],
-    "combined_profit_tax_free": 293.82,
-    "combined_profit": 287.94,
-    "lost_to_tax": 5.88
+    "investments": [],
+    "combined_profit_tax_free": 0,
+    "combined_profit": 0.0,
+    "lost_to_tax": 0.0
 }
