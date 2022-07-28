@@ -36,6 +36,9 @@ def option_remove():
     os.system('clear')
     present_initial()
     stocks_json = read_local_stocks_json()
+    if check_if_empty(stocks_json) == True:
+        present_empty_on_remove()
+        return
     print("\033[0m")
     present_remove_investment_list(stocks_json)
     print()

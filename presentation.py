@@ -51,3 +51,7 @@ def present_remove_investment_list(stocks_json):
 def present_empty():
     print("\033[0m")
     print(Fore.LIGHTBLACK_EX+"No investments to display")
+
+def present_empty_on_remove():
+    print("\033[0m")
+    print(Fore.LIGHTBLACK_EX+"No investments to remove")
