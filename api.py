@@ -3,8 +3,7 @@ import json
 from bs4 import BeautifulSoup
 from util import *
 
-def synch_data():
-    stocks_json = read_local_stocks_json()
+def synch_data(stocks_json):
     tax = stocks_json["tax_procentage"]
     combined_profit = 0
     for i in range(len(stocks_json["investments"])):

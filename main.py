@@ -9,7 +9,7 @@ def loop():
     user_input = str(input())
     if(user_input == "1"):
         option_add()
-        loop() 
+        loop()
     elif(user_input == "2"):
         option_remove()
         loop()

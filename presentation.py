@@ -47,3 +47,7 @@ def present_remove_investment_list(stocks_json):
     demo_symbols_list = ["", "   |   ", "   |   "]
     symbols_list = ["", "   •   ", "   •   "]
     print_stocks_table(rows, demo_symbols_list, symbols_list, -1, Fore.WHITE)
+
+def present_empty():
+    print("\033[0m")
+    print(Fore.LIGHTBLACK_EX+"No investments to display")

@@ -63,14 +63,21 @@ def option_tax():
 def option_stonks_synch():
     os.system('clear')
     present_initial()
-    stocks_json = synch_data()
+    stocks_json_local = read_local_stocks_json()
+    if check_if_empty(stocks_json_local) == True:
+        present_empty()
+        return
+    stocks_json = synch_data(stocks_json_local)
     present_main_table(stocks_json)
 
 def option_stonks_local():
     os.system('clear')
     present_initial()
-    stocks_json = read_local_stocks_json()
-    present_main_table(stocks_json)
+    stocks_json_local = read_local_stocks_json()
+    if check_if_empty(stocks_json_local) == True:
+        present_empty()
+        return
+    present_main_table(stocks_json_local)
 
 def option_exit():
     os.system('clear')

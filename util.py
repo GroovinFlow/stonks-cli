@@ -12,3 +12,8 @@ def write_local_stocks_json(stocks_json):
     with open('/home/azuolas/Documents/vscode/stonks-cli/stocks.json', 'w', encoding='utf-8') as file:
         json.dump(stocks_json, file, ensure_ascii=False, indent=4)
 
+def check_if_empty(stocks_json):
+    if len(stocks_json["investments"]) == 0:
+        return True
+    else:
+        return False
