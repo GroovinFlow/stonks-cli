@@ -1,16 +1,6 @@
 {
-    "tax_procentage": 0.03,
-    "investments": [
-        {
-            "ticker": "TSLA",
-            "starting_sum": 1000.0,
-            "current_sum": 0,
-            "buy_price": "842.70",
-            "last_known_price": 0,
-            "profit": 0,
-            "investment_timestamp": "201286"
-        }
-    ],
+    "tax_procentage": 0.02,
+    "investments": [],
     "combined_profit_tax_free": 0,
     "combined_profit": 0.0,
     "lost_to_tax": 0.0
