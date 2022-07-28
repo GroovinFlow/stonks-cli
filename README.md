@@ -27,5 +27,5 @@ sudo gedit /home/$USER/stonks-cli/stocks.json
 
 ## Uninstall
 ```
-sudo rm "/usr/local/bin/stonks-cli" && sudo rmdir /home/$USER/stonks-cli
+sudo rm "/usr/local/bin/stonks-cli" && sudo rm -rf /home/$USER/stonks-cli
 ```
