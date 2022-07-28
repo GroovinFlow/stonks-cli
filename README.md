@@ -12,7 +12,20 @@ sudo apt install python3
 cd /home/$USER && git clone https://github.com/ProfMad/stonks-cli && cd ./stonks-cli
 sudo mv ./stonks-cli /usr/local/bin
 ```
+## Usage
+Basic functions:
+* Add investment
+* Remove investment
+* Change tax procentage
+* Synch investments
+* Show investments from local cache
+
+Note: Investments can be edited manually (use any editor you like)
+```
+sudo gedit /home/$USER/stonks-cli/stocks.json
+``` 
+
 ## Uninstall
 ```
-sudo rm "/usr/local/bin/stonks-cli" && sudo rmdir /home/$USER/stonks-cli
+sudo rm "/usr/local/bin/stonks-cli" && sudo rm -rf /home/$USER/stonks-cli
 ```
