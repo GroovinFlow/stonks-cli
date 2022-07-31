@@ -5,10 +5,13 @@ Hey, want to be a real sigma grinder and invest in crypto or stocks but you don'
 
 ![Screenshot from 2022-07-27 01-41-22](https://user-images.githubusercontent.com/52932313/181632683-b06b14cf-ea9a-46ca-84ee-1e9794d1fe6f.png)
 
-## Install
-Beware this only works for linux 
+## Install for linux 
+Make sure python is installed
 ```
 sudo apt install python3
+```
+Client installation
+```
 cd /home/$USER && git clone https://github.com/ProfMad/stonks-cli && cd ./stonks-cli
 sudo mv ./stonks-cli /usr/local/bin
 ```
