@@ -25,8 +25,7 @@ def synch_data(stocks_json):
     stocks_json_file_writable = open("stocks.json", "w")
     stocks_json_file_writable.write(str(stocks_json))
     stocks_json_file_writable.close()
-    with open('stocks.json', 'w', encoding='utf-8') as file:
-        json.dump(stocks_json, file, ensure_ascii=False, indent=4)
+    write_local_stocks_json(stocks_json)
     return stocks_json
 
 def get_current_price(ticker: str):
