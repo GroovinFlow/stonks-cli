@@ -23,7 +23,8 @@ def option_add():
                 "buy_price": get_current_price(label),
                 "last_known_price": 0,
                 "profit": 0,
-                "investment_timestamp": timestamp
+                "investment_timestamp": timestamp,
+                "procentage_shift": "▲ 0 %"
             }
         )
         write_local_stocks_json(stocks_json)

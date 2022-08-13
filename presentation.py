@@ -24,20 +24,16 @@ def present_options():
 def present_main_table(stocks_json):
     # INDIVIDUAL
     print("\033[0m")
-    rows = [["Stock label", "Profit", "Investment shift", "Stock price shift"]]
+    rows = [["Stock label", "Profit", "Investment shift", "Stock price shift", "Stock procentage shift"]]
     for i in stocks_json["investments"]:
-        rows.append([str(i["ticker"]), str(i["profit"]), str(i["starting_sum"])+" -> "+str(i["current_sum"]), str(i["buy_price"])+" -> "+str(i["last_known_price"])])
-    demo_symbols_list = ["   ", "   |   ", " / ", "   |   "]
-    symbols_list = [" ○ ", "   •   ", " / ", "   •   "]
+        rows.append([str(i["ticker"]), str(i["profit"]), str(i["starting_sum"])+" -> "+str(i["current_sum"]), str(i["buy_price"])+" -> "+str(i["last_known_price"]), str(i["procentage_shift"])])
+    demo_symbols_list = ["   ", "   |   ", " / ", "   |   ", "   |   "]
+    symbols_list = [" ○ ", "   •   ", " / ", "   •   ", "   •   "]
     print_stocks_table(rows, demo_symbols_list, symbols_list, 1, Fore.LIGHTBLACK_EX)
     # OVERALL
-    portfolio_shift = [0, 0] 
-    for i in stocks_json["investments"]:
-        portfolio_shift[0] += i["starting_sum"]
-    portfolio_shift[1] = portfolio_shift[0] + stocks_json["combined_profit"]
-    rows = [["Overall profit", "Tax free", "Lost to tax", "Portfolio shift"], [str(stocks_json["combined_profit"]), str(stocks_json["combined_profit_tax_free"]), str(stocks_json["lost_to_tax"]), str(portfolio_shift[0])+" -> "+str(portfolio_shift[1])]]
-    demo_symbols_list = ["   ", " / ", "   |   ", "   |   "]
-    symbols_list = [" ○ ", " / ", "   •   ", "   •   "]
+    rows = [["Overall profit", "Tax free", "Lost to tax", "Portfolio shift", "Portfolio procentage shift"], [str(stocks_json["combined_profit"]), str(stocks_json["combined_profit_tax_free"]), str(stocks_json["lost_to_tax"]), str(stocks_json["portfolio_shift"]), str(stocks_json["portfolio_procentage_shift"])]]
+    demo_symbols_list = ["   ", " / ", "   |   ", "   |   ", "   |   "]
+    symbols_list = [" ○ ", " / ", "   •   ", "   •   ", "   •   "]
     print_stocks_table(rows, demo_symbols_list, symbols_list, 0, Fore.LIGHTBLACK_EX)
 
 def present_remove_investment_list(stocks_json):

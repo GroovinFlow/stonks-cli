@@ -1,7 +1,9 @@
 
 from presentation import *
 from options import *
+import os
 
+os.system('clear')
 present_initial()
 
 def loop():

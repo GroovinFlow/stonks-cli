@@ -3,5 +3,7 @@
     "investments": [],
     "combined_profit_tax_free": 0,
     "combined_profit": 0.0,
-    "lost_to_tax": 0.0
+    "lost_to_tax": 0.0,
+    "portfolio_shift" : "",
+    "portfolio_procentage_shift" : ""
 }
