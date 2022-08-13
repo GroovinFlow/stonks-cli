@@ -41,7 +41,7 @@ def present_remove_investment_list(stocks_json):
     for index in range(len(stocks_json["investments"])):
         rows.append(["["+str(index+1)+"] "+str(stocks_json["investments"][index]["ticker"]), str(stocks_json["investments"][index]["starting_sum"]), str(stocks_json["investments"][index]["investment_timestamp"])])
     demo_symbols_list = ["", "   |   ", "   |   "]
-    symbols_list = ["", "   •   ", "   •   "]
+    symbols_list = ["", "   •   ", "   •   "] 
     print_stocks_table(rows, demo_symbols_list, symbols_list, -1, Fore.WHITE)
 
 def present_empty():
