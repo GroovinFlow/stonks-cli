@@ -23,4 +23,4 @@ def calculate_stocks_shift_procentage(profit: float, buy_price: float, last_know
     stocks_procentage = "▲ "
     if profit < 0:
         stocks_procentage = "▼ "
-    return stocks_procentage+str(round((100*last_known_price)/buy_price-100, 2))+" %"
+    return stocks_procentage+str(round((100*last_known_price)/float(buy_price)-100, 2))+" %"

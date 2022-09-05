@@ -26,7 +26,7 @@ def synch_data(stocks_json):
     portfolio_shift = [0, 0] 
     for i in stocks_json["investments"]:
         portfolio_shift[0] += i["starting_sum"]
-    portfolio_shift[1] = portfolio_shift[0] + stocks_json["combined_profit"]
+    portfolio_shift[1] = round(float(portfolio_shift[0] + stocks_json["combined_profit"]), 2)
     stocks_json["portfolio_shift"] = str(portfolio_shift[0])+" -> "+str(portfolio_shift[1])
     stocks_json["portfolio_procentage_shift"] = calculate_stocks_shift_procentage(stocks_json["combined_profit"], portfolio_shift[0], portfolio_shift[1])
     stocks_json_file_writable = open("stocks.json", "w")
