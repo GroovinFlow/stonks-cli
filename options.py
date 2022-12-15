@@ -1,13 +1,14 @@
 from api import *
 from presentation import *
 import os
+from datetime import datetime
 
 def option_add():
     os.system('clear')
     present_initial()
     print("\033[0m")
     label = input("Investment ticker: ")
-    timestamp = input("Timestamp: ")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     try:
         starting_sum = float(input("Starting sum: "))
     except:
