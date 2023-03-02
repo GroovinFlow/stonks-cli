@@ -37,7 +37,6 @@ def synch_data(stocks_json):
 
 def get_current_price(ticker: str):
     headers = {"Content-Type": "application/json; charset=utf-8","User-Agent" : "PostmanRuntime/7.29.2"}
-    api_response = requests.get('https://finance.yahoo.com/quote/'+ticker+'?p='+ticker+'&.tsrc=fin-srch',headers=headers)
-    soup = BeautifulSoup(api_response.content, "html.parser")
-    current_price = soup.find(attrs={"data-symbol" : ticker}).text.replace(",", "")
+    api_response = requests.get('https://query1.finance.yahoo.com/v8/finance/chart/'+ticker, headers=headers)._content
+    current_price = json.loads(api_response)["chart"]["result"][0]["meta"]["regularMarketPrice"]
     return current_price
